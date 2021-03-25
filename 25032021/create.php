@@ -50,14 +50,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_name = $name;
             $param_address = $address;
             $param_salary = $salary;
-            
-            // Attempt to execute the prepared statement
+
+            // Tenta executar a instrução preparada
             if(mysqli_stmt_execute($stmt)){
-                // Records created successfully. Redirect to landing page
+                // Registros criados com sucesso. Redirecionar para a página de destino
                 header("location: index.php");
                 exit();
             } else{
-                echo "Oops! Something went wrong. Please try again later.";
+                echo "OUps! Algo deu errado. Por favor, tente novamente mais tarde.";
             }
         }
          

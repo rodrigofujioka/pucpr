@@ -66,16 +66,15 @@
                                 }
                                 echo "</tbody>";                            
                             echo "</table>";
-                            // Free result set
+
                             mysqli_free_result($result);
                         } else{
                             echo '<div class="alert alert-danger"><em>Não existem registros gravados.</em></div>';
                         }
                     } else{
-                        echo "Oops! Something went wrong. Please try again later.";
+                        echo "ops! Algo deu errado. Por favor, tente novamente mais tarde.";
                     }
- 
-                    // Close connection
+
                     mysqli_close($link);
                     ?>
                 </div>

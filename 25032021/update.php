@@ -14,9 +14,9 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     // Validate name
     $input_name = trim($_POST["name"]);
     if(empty($input_name)){
-        $name_err = "Please enter a name.";
+        $name_err = "Informe um nome.";
     } elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
-        $name_err = "Please enter a valid name.";
+        $name_err = "Informe um nome válido.";
     } else{
         $name = $input_name;
     }
@@ -24,7 +24,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     // Validate address address
     $input_address = trim($_POST["address"]);
     if(empty($input_address)){
-        $address_err = "Please enter an address.";     
+        $address_err = "Informe um endereço.";
     } else{
         $address = $input_address;
     }
